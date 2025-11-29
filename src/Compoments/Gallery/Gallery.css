@@ -1,0 +1,159 @@
+/* Main layout */
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 10px;
+  background: linear-gradient(to bottom right, #f5f7fa, #e0e5ec);
+  overflow: hidden;
+}
+
+/* Title */
+.gallery-page h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ff6b4a;
+  margin-bottom: 20px;
+}
+
+/* Movie frame styling */
+.cinematic-frame {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  border-top: 12px solid black;
+  border-bottom: 12px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+/* Animation container */
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollLoop 20s linear infinite;
+}
+
+/* Card styling */
+.gallery-card {
+  width: clamp(180px, 40vw, 220px);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Image styling */
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Text overlay */
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 14px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Infinite seamless loop */
+@keyframes scrollLoop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+/* 📌 Laptop (1024px - 1366px screens) */
+@media (max-width: 1366px) {
+  .cinematic-frame {
+    max-width: 1000px;
+  }
+
+  .gallery-card {
+    width: 200px;
+  }
+}
+
+/* 📌 Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .cinematic-frame {
+    max-width: 850px;
+  }
+
+  .scroll-container {
+    gap: 15px;
+    animation-duration: 25s; /* Slow movement on small screens */
+  }
+
+  .gallery-card {
+    width: 180px;
+  }
+}
+
+/* 📌 Mobile Landscape + Small Tablets (600px - 767px) */
+@media (max-width: 767px) {
+  .gallery-page {
+    padding: 20px 5px;
+  }
+
+  .cinematic-frame {
+    border-top: 8px solid black;
+    border-bottom: 8px solid black;
+  }
+
+  .gallery-card {
+    width: 140px;
+  }
+}
+
+/* 📌 Mobile Phones (<= 600px) */
+@media (max-width: 600px) {
+  .gallery-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .scroll-container {
+    gap: 8px;
+    animation-duration: 28s; /* Even slower for readability */
+  }
+
+  .gallery-card {
+    width: 120px;
+    border-radius: 10px;
+  }
+
+  .gallery-card img {
+    aspect-ratio: 4/3;
+  }
+
+  .gallery-overlay {
+    font-size: 10px;
+    padding: 3px 0;
+  }
+}
+
+/* 📌 Very Small Phones (<= 400px) */
+@media (max-width: 400px) {
+  .gallery-card {
+    width: 100px;
+  }
+
+  .gallery-overlay {
+    font-size: 9px;
+  }
+}

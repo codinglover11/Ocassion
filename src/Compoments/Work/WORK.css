@@ -1,0 +1,166 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background Layout */
+.MAIN-DIV {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+}
+
+/* Left Side 3D Gradient */
+.MAIN-LEFT {
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(145deg, #1e3c72, #2a5298);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  animation: slideInLeft 1.5s ease forwards;
+}
+
+/* Main Box (Right Side Form Container) */
+.MAIN-BOX {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+/* 3D Form Styling */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: rotateY(-10deg);
+  animation: popUp 1s ease forwards;
+  transition: all 0.4s ease;
+}
+
+form:hover {
+  transform: rotateY(0deg) scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Input and Select Fields */
+input,
+select {
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  margin: 10px 0 20px 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 10px #2a5298, inset 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+}
+
+/* Label Styling */
+label {
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateY(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateY(-10deg);
+  }
+}
+
+/* Scrollbar hide (optional aesthetic) */
+::-webkit-scrollbar {
+  display: none;
+}
+/* 📱 Mobile & Tablet */
+@media (max-width: 900px) {
+  .MAIN-DIV {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .MAIN-LEFT {
+    width: 100%;
+    height: 200px;
+    font-size: 1.5rem;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .MAIN-BOX {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    justify-content: flex-start;
+  }
+
+  form {
+    width: 90%;
+    transform: rotateY(0deg); /* no awkward tilt on phone */
+    margin-top: 20px;
+  }
+}
+
+/* 📱 Small Mobile Fix */
+@media (max-width: 480px) {
+  .MAIN-LEFT {
+    height: 150px;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+  }
+
+  form {
+    padding: 25px;
+    width: 95%;
+  }
+
+  input, select {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}

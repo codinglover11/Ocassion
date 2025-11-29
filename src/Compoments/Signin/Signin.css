@@ -1,0 +1,124 @@
+/* Full screen background with moving gradient */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff6b6b, #ffb86c, #f8e1a1, #ff6b6b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sign Up Card */
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Heading */
+form h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Error */
+.error {
+  color: #e63946;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  border-color: #ffb86c;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255,184,108,0.4);
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffb86c;
+  color: #2c2c2c;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+form button:hover {
+  background-color: #ff9c3b;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255,156,59,0.5);
+}
+
+/* Switch link */
+.switch-form {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.switch-form span {
+  color: #ff9c3b;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.switch-form span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  form {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+  form h2 {
+    font-size: 22px;
+  }
+  form input {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,165 @@
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e9edf3;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN LAYOUT */
+.vendors-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* LEFT PANEL */
+.vendors-left {
+  flex: 7;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-search {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding-bottom: 10px;
+  z-index: 10;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  outline: none;
+  margin-top: 8px;
+}
+
+.search-input:focus {
+  border-color: #00a68a;
+  box-shadow: 0 0 8px rgba(0,166,138,0.4);
+}
+
+.vendor-list {
+  margin-top: 10px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* CATEGORY */
+.category-title {
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* GRID IMPROVED */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+/* RIGHT PANEL */
+.vendors-right {
+  flex: 3;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow-y: auto;
+}
+
+.top-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* VENDOR CARDS */
+.vendor-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.vendor-card:hover {
+  transform: translateY(-4px);
+}
+
+.vendor-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #eee;
+  margin-bottom: 8px;
+}
+
+.vendor-card button {
+  margin-top: 8px;
+  padding: 8px 15px;
+  background: #00997a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vendor-card button:hover {
+  background: #00715a;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 480px) {
+  .vendors-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .vendors-left, .vendors-right {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 12px;
+  }
+
+  .vendor-img {
+    height: 120px;
+  }
+
+  .vendor-card button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .category-title, .top-title {
+    font-size: 16px;
+  }
+}
