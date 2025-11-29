@@ -42,4 +42,28 @@ Ocassion is a modern web-based platform designed to simplify the process of plan
 ---
 
 ## 📂 Project Structure
+Ocassio_Frontend/
+│── public/
+│── src/
+│ ├── Compoments/
+│ │ ├── HomePage/
+│ │ ├── Vendors/
+│ │ ├── Login/
+│ │ ├── Service/
+│ │ ├── Enquire/
+│ │ ├── Work/
+│ │ ├── Gallery/
+│ │ ├── SplashScreen/
+│ │ └── ...
+│ ├── assets/
+│ ├── App.jsx
+│ ├── main.jsx
+│── index.html
+│── package.json
+└── README.md
 
+👤 Author
+
+Piyush Tewani
+MERN Developer || SDE 
+https://piyushworld.netlify.app
