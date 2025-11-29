@@ -1,12 +1,45 @@
-# React + Vite
+# 🎉 Ocassion — Event Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ocassion is a modern web-based platform designed to simplify the process of planning and organizing events like weddings, birthdays, corporate events, concerts, and more. Users can explore services, browse vendor listings, and send event enquiries with ease.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🔗 https://your-deployment-link-here.com  
+(Will update once deployed)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖼️ Screenshots
+
+| Splash Screen | Home Page | Vendors |
+|--------------|-----------|---------|
+| ![Splash](./src/assets/Splashs.png) | ![Home](./src/Compoments/images/wedding.jpeg) | ![Vendor](./src/Compoments/images/DJ_Vendor.jpg) |
+
+> *Update screenshots later with proper UI previews*
+
+---
+
+## ✨ Features
+
+✔ Interactive Homepage with high-quality animations  
+✔ Vendor listing with filters  
+✔ Event categories for easy navigation  
+✔ Inquiry form to connect customers and vendors  
+✔ Secure login/signup functionality  
+✔ Fully responsive UI — works on all devices  
+
+---
+
+## 🛠️ Tech Stack
+
+| Area | Technology |
+|------|------------|
+| Frontend | React.js, JavaScript, HTML5, CSS3, Tailwind (optional future) |
+| Build Tool | Vite |
+| Version Control | Git + GitHub |
+
+---
+
+## 📂 Project Structure
+
